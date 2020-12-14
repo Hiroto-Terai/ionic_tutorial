@@ -2,19 +2,22 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title>Mock Vue</ion-title>
+        <ion-buttons slot="start">
+          <ion-back-button default-href="/home"></ion-back-button>
+        </ion-buttons>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Page1</ion-title>
+          <ion-title size="large">Page 2</ion-title>
         </ion-toolbar>
       </ion-header>
 
       <div id="container">
-        <ion-button @click="() => router.push('/page2')">ページ２への遷移</ion-button>
+        <p>ページ２です！</p>
       </div>
     </ion-content>
   </ion-page>
@@ -22,6 +25,7 @@
 
 <script>
 import {
+  IonBackButton,
   IonContent,
   IonHeader,
   IonPage,
@@ -29,21 +33,16 @@ import {
   IonToolbar
 } from "@ionic/vue";
 import { defineComponent } from "vue";
-import { useRouter } from "vue-router";
 
 export default defineComponent({
-  name: "Home",
+  name: "Page2",
   components: {
+    IonBackButton,
     IonContent,
     IonHeader,
     IonPage,
     IonTitle,
     IonToolbar
-  },
-  setup() {
-    // 追加
-    const router = useRouter();
-    return { router };
   }
 });
 </script>
@@ -51,7 +50,6 @@ export default defineComponent({
 <style scoped>
 #container {
   text-align: center;
-
   position: absolute;
   left: 0;
   right: 0;
@@ -67,9 +65,7 @@ export default defineComponent({
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 
@@ -77,4 +73,3 @@ export default defineComponent({
   text-decoration: none;
 }
 </style>
-
