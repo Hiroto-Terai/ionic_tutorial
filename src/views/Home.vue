@@ -15,6 +15,8 @@
 
       <div id="container">
         <strong>Ready to create an app?</strong>
+        <strong>Ready to create an app?</strong>
+        <strong>Ready to create an app?</strong>
         <p>
           Start with Ionic
           <a
@@ -79,3 +81,4 @@ export default defineComponent({
   text-decoration: none;
 }
 </style>
+
